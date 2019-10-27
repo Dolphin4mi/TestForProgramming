@@ -1,0 +1,14 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+import mpl_toolkits.mplot3d
+
+x, y = np.mgrid[-2:2:0.01, -2:2:0.01]
+
+z=(x*y**2)/(x**2+y**4)
+ax = plt.subplot(111, projection='3d')
+ax.plot_surface(x, y, z, rstride=1, cstride=1, cmap='rainbow', alpha=0.9)#绘面
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+plt.show()
